@@ -15,11 +15,13 @@ const Counter = ({ value, onIncrement, onDecrement, setBalance }) => {
   }, [])
 
   return (
+    <div>
+    <h1>£ {value}</h1>
     <p>
-      £ {value} 
       <Button variant="contained" color="primary" size="small" onClick={onIncrement}>+</Button>
       <Button variant="contained" color="secundary" size="small" onClick={onDecrement}>-</Button>
     </p>
+    </div>
   )
 };
 export default Counter
