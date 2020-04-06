@@ -1,22 +1,8 @@
-import axios from 'axios'
 
-//const count
-//const name;
-//const currency;
-
-const getPayload = () => { axios.get('https://demo9104838.mockable.io/currencies')
-     .then(res => {
-
-      const count = res.data.balance;
-      const name = res.data.name;
-      const currency = res.data.currency;
-
-     })
-}
-
-
-export default function counter(state = 0, action) {
+export default function counter(state, action) {
  switch (action.type) {
+   case 'SETBALANCE':
+    return action.balance
    case 'INCREMENT':
      return state + 1
    case 'DECREMENT':
@@ -24,4 +10,5 @@ export default function counter(state = 0, action) {
    default:
      return state
  }
+
 }
