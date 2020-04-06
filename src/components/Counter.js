@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Button } from '@material-ui/core';
+
 
 const Counter = ({ value, onIncrement, onDecrement, setBalance }) => {
 
@@ -14,9 +16,9 @@ const Counter = ({ value, onIncrement, onDecrement, setBalance }) => {
 
   return (
     <p>
-      Clicked: {value} times
-      <button onClick={onIncrement}>+</button>
-      <button onClick={onDecrement}>-</button>
+      £ {value} 
+      <Button variant="contained" color="primary" size="small" onClick={onIncrement}>+</Button>
+      <Button variant="contained" color="secundary" size="small" onClick={onDecrement}>-</Button>
     </p>
   )
 };
